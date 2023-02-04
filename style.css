@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #B9F3FC;
+}
+
+/* Score Area */
+.scoreArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    min-width: 50%;
+
+    position: absolute;
+    top: 13%;
+}
+
+.heading {
+    margin: 7px 10px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    letter-spacing: 2.2px;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5BC0F8;
+    color: #FFFFFF;
+    margin: 10px;
+    padding: 20px 15px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+#score {
+    font-size: 2rem;
+}
+
+/* Play Area */
+.playArea {
+    display: flex;
+
+    position: absolute;
+    bottom: 13%;
+}
+
+/* .playArea img {
+    width: 60px;
+} */
+
+.initialOn {
+    display: flex;
+    flex-direction: column;
+}
+
+.initialOn img:hover {
+    /* hover */
+    background-color: #b3b0b0;
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.35));
+}
+
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.below-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.initialOff {
+    display: none;
+}
+
+.mid-man { /* In middle who win or lose -- show part */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+    letter-spacing: 2.2px;
+}
+
+.mid-man button {
+    margin: 5px;
+    padding: 7px 17px;
+    background-color: #FFFFFF;
+    border-radius: 9px;
+    border: none;
+    letter-spacing: 2.2px;
+}
+
+.mid-man button:hover {
+    background-color: rgb(220, 218, 218);
+}
+
+.win {
+    background: rgba(37, 63, 154, 0.39);
+    box-shadow: 0px 1px 62px rgba(0, 0, 0, 0.13);
+}
+
+/* Utility Box */
+span {
+    font-weight: 600;
+}
+
+/* Display Game Rule System */
+.rule-btn {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    padding: 5px 10px;
+    letter-spacing: 2.2px;
+    background-color: #5BC0F8;
+    border: none;
+}
+
+.rule-btn:hover {
+    border: 1px solid;
+}
+
+.game-rule {
+    background-color: #337091;
+    border-radius: 18px;
+    padding: 15px;
+    display: none;
+    position: absolute;
+    right: 1%;
+    top: 30%;
+    max-width: 365px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.game-rule h3 {
+    letter-spacing: 2.5px;
+    color: #FFFFFF;
+}
+
+.game-rule ul {
+    padding: 10px;
+    text-align: left;
+}
+
+.game-rule li {
+    margin: 13px 0;
+}
+
+#cross {
+    cursor: pointer;
+    position: absolute;
+    padding: 5px 9px;
+    top: 0;
+    right: 0;
+    border: none;
+    border-radius: 25px;
+    background-color: #5BC0F8;
+    color: #FFFFFF;
+}
+
+#cross:hover {
+    padding: 6px 10px;
+    filter: drop-shadow(0px 0px 2px rgba(0, 1, 0, 1));
+}
+
+.try { /* Tie -- try again show*/
+    display: none;
+    position: absolute;
+    bottom: 2%;
+    letter-spacing: 1.5px;
+}
+
+/* option box */
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+    border-radius: 110px;
+    cursor: pointer;
+    line-height: 1.6;
+    letter-spacing: 1.5px;
+}
+
+.rock img {
+    width: 60px;
+    padding: 1rem 1.2rem;
+    background-color: #fff;
+    border: 16px solid #FFD600;
+    border-radius: 75px;
+    filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));
+}
+
+.paper img {
+    width: 60px;
+    padding: 0.6rem 1.2rem;
+    background-color: #fff;
+    border: 16px solid #FF4370;
+    border-radius: 75px;
+    filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));
+}
+
+.scissor img {
+    width: 60px;
+    background-color: #fff;
+    padding: 0.4rem 1.1rem;
+    border: 16px solid #CC00FF;
+    border-radius: 75px;
+    filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));
+}
+
+@media only screen and (max-width: 600px) {
+    .playArea img {
+        width: 45px;
+    }
+
+    .box {
+        padding: 4px;
+        font-size: 0.7rem;
+    }
+
+    .rock img {
+        border: 10px solid #FFD600;
+    }
+
+    .paper img {
+        border: 10px solid #FF4370;
+    }
+
+    .scissor img {
+        border: 10px solid #CC00FF;
+    }
+
+    .mid-man {
+        letter-spacing: normal;
+    }
+
+    .mid-man button {
+        margin: 2px;
+        padding: 4px 7px;
+        letter-spacing: normal;
+    }
+}
+
+/* Line between Option */
+.l1{
+    position: absolute;
+    height: 5%;
+    width: 50%;
+    background-color: #337091;
+    bottom: 40%;
+    right: 4%;
+    transform: rotate(67deg);
+    overflow: hidden;
+}
+.l2{
+    position: absolute;
+    height: 5%;
+    width: 50%;
+    background-color: #337091;
+    bottom: 42%;
+    left: 4%;
+    transform: rotate(-66deg);
+}
+.l3{
+    position: absolute;
+    height: 5%;
+    width: 50%;
+    background-color: #337091;
+    bottom: 23%;
+    transform: rotate(0deg);
+}
